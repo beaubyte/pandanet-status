@@ -37,7 +37,8 @@ Rectangle {
             font.pixelSize: 20
             horizontalAlignment: Text.AlignLeft
             verticalAlignment: Text.AlignTop
-            font.family: "Verdana"
+            font.styleName: "Medium Italic"
+            font.family: "Ubuntu Mono"
             anchors.horizontalCenter: parent.horizontalCenter
             leftPadding: 0
             rightPadding: 0
@@ -48,7 +49,7 @@ Rectangle {
             color: "#ffdedc"
             radius: 10
             border.color: "#757575"
-            border.width: 2
+            border.width: 0
             anchors.fill: parent
             z: -1
         }
@@ -62,6 +63,8 @@ Rectangle {
             contentWidth: statusList.width
             anchors.top: statusHeader.bottom
             anchors.topMargin: 20
+            synchronousDrag: false
+            flickableDirection: Flickable.VerticalFlick
 
             Column {
                 id: statusList
@@ -82,11 +85,13 @@ Rectangle {
 
                     Text {
                         id: text1
+                        color: "#2a2a2a"
                         text: qsTr("Prism")
                         anchors.left: parent.left
                         anchors.leftMargin: 0
                         font.pixelSize: 16
-                        font.family: "Verdana"
+                        font.styleName: "Medium"
+                        font.family: "Ubuntu Mono"
                         minimumPointSize: 12
                     }
 
@@ -94,25 +99,13 @@ Rectangle {
                         id: rectangle5
                         width: 15
                         height: 15
-                        color: "#02ff00"
+                        color: "#ff7068"
                         radius: 15
                         border.color: "#000000"
-                        border.width: 1
+                        border.width: 0
                         anchors.verticalCenter: parent.verticalCenter
                         anchors.right: parent.right
                         anchors.rightMargin: 0
-                        gradient: Gradient {
-                            GradientStop {
-                                position: 0
-                                color: "#00ff7b"
-                            }
-
-                            GradientStop {
-                                position: 1
-                                color: "#38f9d7"
-                            }
-                            orientation: Gradient.Vertical
-                        }
                     }
                 }
 
@@ -123,37 +116,27 @@ Rectangle {
                     anchors.horizontalCenter: parent.horizontalCenter
                     Text {
                         id: text2
+                        color: "#2a2a2a"
                         text: qsTr("Framework")
                         anchors.left: parent.left
                         anchors.leftMargin: 0
                         font.pixelSize: 16
+                        font.styleName: "Medium"
                         minimumPointSize: 12
-                        font.family: "Verdana"
+                        font.family: "Ubuntu Mono"
                     }
 
                     Rectangle {
                         id: rectangle7
                         width: 15
                         height: 15
-                        color: "#02ff00"
+                        color: "#ff7068"
                         radius: 15
                         border.color: "#000000"
-                        border.width: 1
+                        border.width: 0
                         anchors.verticalCenter: parent.verticalCenter
                         anchors.right: parent.right
                         anchors.rightMargin: 0
-                        gradient: Gradient {
-                            GradientStop {
-                                position: 0
-                                color: "#00ff7b"
-                            }
-
-                            GradientStop {
-                                position: 1
-                                color: "#38f9d7"
-                            }
-                            orientation: Gradient.Vertical
-                        }
                     }
                 }
 
@@ -164,37 +147,26 @@ Rectangle {
                     anchors.horizontalCenter: parent.horizontalCenter
                     Text {
                         id: text3
+                        color: "#2a2a2a"
                         text: qsTr("Xenia")
                         anchors.left: parent.left
                         anchors.leftMargin: 0
                         font.pixelSize: 16
+                        font.styleName: "Medium"
                         minimumPointSize: 12
-                        font.family: "Verdana"
+                        font.family: "Ubuntu Mono"
                     }
 
                     Rectangle {
                         id: rectangle8
                         width: 15
                         height: 15
-                        color: "#02ff00"
                         radius: 15
                         border.color: "#000000"
-                        border.width: 1
+                        border.width: 0
                         anchors.verticalCenter: parent.verticalCenter
                         anchors.right: parent.right
                         anchors.rightMargin: 0
-                        gradient: Gradient {
-                            GradientStop {
-                                position: 0
-                                color: "#00ff7b"
-                            }
-
-                            GradientStop {
-                                position: 1
-                                color: "#38f9d7"
-                            }
-                            orientation: Gradient.Vertical
-                        }
                     }
                 }
 
@@ -205,22 +177,23 @@ Rectangle {
                     anchors.horizontalCenter: parent.horizontalCenter
                     Text {
                         id: text4
+                        color: "#2a2a2a"
                         text: qsTr("Sumac")
                         anchors.left: parent.left
                         anchors.leftMargin: 0
                         font.pixelSize: 16
+                        font.styleName: "Medium"
                         minimumPointSize: 12
-                        font.family: "Verdana"
+                        font.family: "Ubuntu Mono"
                     }
 
                     Rectangle {
                         id: rectangle9
                         width: 15
                         height: 15
-                        color: "#02ff00"
                         radius: 15
                         border.color: "#000000"
-                        border.width: 1
+                        border.width: 0
                         anchors.verticalCenter: parent.verticalCenter
                         anchors.right: parent.right
                         anchors.rightMargin: 0
@@ -246,22 +219,23 @@ Rectangle {
                     anchors.horizontalCenter: parent.horizontalCenter
                     Text {
                         id: text7
+                        color: "#2a2a2a"
                         text: qsTr("Prism")
                         anchors.left: parent.left
                         anchors.leftMargin: 0
                         font.pixelSize: 16
+                        font.styleName: "Medium"
                         minimumPointSize: 12
-                        font.family: "Verdana"
+                        font.family: "Ubuntu Mono"
                     }
 
                     Rectangle {
                         id: rectangle10
                         width: 15
                         height: 15
-                        color: "#02ff00"
                         radius: 15
                         border.color: "#000000"
-                        border.width: 1
+                        border.width: 0
                         anchors.verticalCenter: parent.verticalCenter
                         anchors.right: parent.right
                         anchors.rightMargin: 0
@@ -287,22 +261,23 @@ Rectangle {
                     anchors.horizontalCenter: parent.horizontalCenter
                     Text {
                         id: text8
+                        color: "#2a2a2a"
                         text: qsTr("Framework")
                         anchors.left: parent.left
                         anchors.leftMargin: 0
                         font.pixelSize: 16
+                        font.styleName: "Medium"
                         minimumPointSize: 12
-                        font.family: "Verdana"
+                        font.family: "Ubuntu Mono"
                     }
 
                     Rectangle {
                         id: rectangle11
                         width: 15
                         height: 15
-                        color: "#02ff00"
                         radius: 15
                         border.color: "#000000"
-                        border.width: 1
+                        border.width: 0
                         anchors.verticalCenter: parent.verticalCenter
                         anchors.right: parent.right
                         anchors.rightMargin: 0
@@ -328,22 +303,23 @@ Rectangle {
                     anchors.horizontalCenter: parent.horizontalCenter
                     Text {
                         id: text9
+                        color: "#2a2a2a"
                         text: qsTr("Xenia")
                         anchors.left: parent.left
                         anchors.leftMargin: 0
                         font.pixelSize: 16
+                        font.styleName: "Medium"
                         minimumPointSize: 12
-                        font.family: "Verdana"
+                        font.family: "Ubuntu Mono"
                     }
 
                     Rectangle {
                         id: rectangle12
                         width: 15
                         height: 15
-                        color: "#02ff00"
                         radius: 15
                         border.color: "#000000"
-                        border.width: 1
+                        border.width: 0
                         anchors.verticalCenter: parent.verticalCenter
                         anchors.right: parent.right
                         anchors.rightMargin: 0
@@ -369,22 +345,23 @@ Rectangle {
                     anchors.horizontalCenter: parent.horizontalCenter
                     Text {
                         id: text10
+                        color: "#2a2a2a"
                         text: qsTr("Sumac")
                         anchors.left: parent.left
                         anchors.leftMargin: 0
                         font.pixelSize: 16
+                        font.styleName: "Medium"
                         minimumPointSize: 12
-                        font.family: "Verdana"
+                        font.family: "Ubuntu Mono"
                     }
 
                     Rectangle {
                         id: rectangle13
                         width: 15
                         height: 15
-                        color: "#02ff00"
                         radius: 15
                         border.color: "#000000"
-                        border.width: 1
+                        border.width: 0
                         anchors.verticalCenter: parent.verticalCenter
                         anchors.right: parent.right
                         anchors.rightMargin: 0
@@ -410,22 +387,23 @@ Rectangle {
                     anchors.horizontalCenter: parent.horizontalCenter
                     Text {
                         id: text11
+                        color: "#2a2a2a"
                         text: qsTr("Prism")
                         anchors.left: parent.left
                         anchors.leftMargin: 0
                         font.pixelSize: 16
+                        font.styleName: "Medium"
                         minimumPointSize: 12
-                        font.family: "Verdana"
+                        font.family: "Ubuntu Mono"
                     }
 
                     Rectangle {
                         id: rectangle14
                         width: 15
                         height: 15
-                        color: "#02ff00"
                         radius: 15
                         border.color: "#000000"
-                        border.width: 1
+                        border.width: 0
                         anchors.verticalCenter: parent.verticalCenter
                         anchors.right: parent.right
                         anchors.rightMargin: 0
@@ -451,22 +429,23 @@ Rectangle {
                     anchors.horizontalCenter: parent.horizontalCenter
                     Text {
                         id: text12
+                        color: "#2a2a2a"
                         text: qsTr("Framework")
                         anchors.left: parent.left
                         anchors.leftMargin: 0
                         font.pixelSize: 16
+                        font.styleName: "Medium"
                         minimumPointSize: 12
-                        font.family: "Verdana"
+                        font.family: "Ubuntu Mono"
                     }
 
                     Rectangle {
                         id: rectangle15
                         width: 15
                         height: 15
-                        color: "#02ff00"
                         radius: 15
                         border.color: "#000000"
-                        border.width: 1
+                        border.width: 0
                         anchors.verticalCenter: parent.verticalCenter
                         anchors.right: parent.right
                         anchors.rightMargin: 0
@@ -492,22 +471,23 @@ Rectangle {
                     anchors.horizontalCenter: parent.horizontalCenter
                     Text {
                         id: text13
+                        color: "#2a2a2a"
                         text: qsTr("Xenia")
                         anchors.left: parent.left
                         anchors.leftMargin: 0
                         font.pixelSize: 16
+                        font.styleName: "Medium"
                         minimumPointSize: 12
-                        font.family: "Verdana"
+                        font.family: "Ubuntu Mono"
                     }
 
                     Rectangle {
                         id: rectangle16
                         width: 15
                         height: 15
-                        color: "#02ff00"
                         radius: 15
                         border.color: "#000000"
-                        border.width: 1
+                        border.width: 0
                         anchors.verticalCenter: parent.verticalCenter
                         anchors.right: parent.right
                         anchors.rightMargin: 0
@@ -533,22 +513,23 @@ Rectangle {
                     anchors.horizontalCenter: parent.horizontalCenter
                     Text {
                         id: text14
+                        color: "#2a2a2a"
                         text: qsTr("Sumac")
                         anchors.left: parent.left
                         anchors.leftMargin: 0
                         font.pixelSize: 16
+                        font.styleName: "Medium"
                         minimumPointSize: 12
-                        font.family: "Verdana"
+                        font.family: "Ubuntu Mono"
                     }
 
                     Rectangle {
                         id: rectangle17
                         width: 15
                         height: 15
-                        color: "#02ff00"
                         radius: 15
                         border.color: "#000000"
-                        border.width: 1
+                        border.width: 0
                         anchors.verticalCenter: parent.verticalCenter
                         anchors.right: parent.right
                         anchors.rightMargin: 0
@@ -574,22 +555,23 @@ Rectangle {
                     anchors.horizontalCenter: parent.horizontalCenter
                     Text {
                         id: text15
+                        color: "#2a2a2a"
                         text: qsTr("Prism")
                         anchors.left: parent.left
                         anchors.leftMargin: 0
                         font.pixelSize: 16
+                        font.styleName: "Medium"
                         minimumPointSize: 12
-                        font.family: "Verdana"
+                        font.family: "Ubuntu Mono"
                     }
 
                     Rectangle {
                         id: rectangle18
                         width: 15
                         height: 15
-                        color: "#02ff00"
                         radius: 15
                         border.color: "#000000"
-                        border.width: 1
+                        border.width: 0
                         anchors.verticalCenter: parent.verticalCenter
                         anchors.right: parent.right
                         anchors.rightMargin: 0
@@ -615,37 +597,27 @@ Rectangle {
                     anchors.horizontalCenter: parent.horizontalCenter
                     Text {
                         id: text16
+                        color: "#2a2a2a"
                         text: qsTr("Framework")
                         anchors.left: parent.left
                         anchors.leftMargin: 0
                         font.pixelSize: 16
+                        font.styleName: "Medium"
                         minimumPointSize: 12
-                        font.family: "Verdana"
+                        font.family: "Ubuntu Mono"
                     }
 
                     Rectangle {
                         id: rectangle19
                         width: 15
                         height: 15
-                        color: "#02ff00"
+                        color: "#ff7068"
                         radius: 15
                         border.color: "#000000"
-                        border.width: 1
+                        border.width: 0
                         anchors.verticalCenter: parent.verticalCenter
                         anchors.right: parent.right
                         anchors.rightMargin: 0
-                        gradient: Gradient {
-                            GradientStop {
-                                position: 0
-                                color: "#00ff7b"
-                            }
-
-                            GradientStop {
-                                position: 1
-                                color: "#38f9d7"
-                            }
-                            orientation: Gradient.Vertical
-                        }
                     }
                 }
 
@@ -656,6 +628,7 @@ Rectangle {
                     anchors.horizontalCenter: parent.horizontalCenter
                     Text {
                         id: text17
+                        color: "#2a2a2a"
                         text: qsTr("Xenia")
                         anchors.left: parent.left
                         anchors.leftMargin: 0
@@ -668,10 +641,10 @@ Rectangle {
                         id: rectangle20
                         width: 15
                         height: 15
-                        color: "#02ff00"
+                        color: "#ff7068"
                         radius: 15
                         border.color: "#000000"
-                        border.width: 1
+                        border.width: 0
                         anchors.verticalCenter: parent.verticalCenter
                         anchors.right: parent.right
                         anchors.rightMargin: 0
@@ -697,6 +670,7 @@ Rectangle {
                     anchors.horizontalCenter: parent.horizontalCenter
                     Text {
                         id: text18
+                        color: "#2a2a2a"
                         text: qsTr("Sumac")
                         anchors.left: parent.left
                         anchors.leftMargin: 0
@@ -709,10 +683,10 @@ Rectangle {
                         id: rectangle21
                         width: 15
                         height: 15
-                        color: "#02ff00"
+                        color: "#ff7068"
                         radius: 15
                         border.color: "#000000"
-                        border.width: 1
+                        border.width: 0
                         anchors.verticalCenter: parent.verticalCenter
                         anchors.right: parent.right
                         anchors.rightMargin: 0
@@ -748,10 +722,10 @@ Rectangle {
             id: rectangle1
             width: 200
             height: 200
-            color: "#dacbff"
+            color: "#ffdedc"
             radius: 10
-            border.color: "#785eff"
-            border.width: 2
+            border.color: "#ff7068"
+            border.width: 0
 
             Text {
                 id: text5
@@ -761,7 +735,9 @@ Rectangle {
                 anchors.leftMargin: 10
                 anchors.topMargin: 10
                 font.pixelSize: 16
-                font.family: "Verdana"
+                horizontalAlignment: Text.AlignLeft
+                font.bold: false
+                font.family: "Ubuntu Mono"
             }
         }
 
@@ -772,7 +748,7 @@ Rectangle {
             color: "#ffdedc"
             radius: 10
             border.color: "#ff8c8c"
-            border.width: 2
+            border.width: 0
         }
 
         Rectangle {
@@ -782,7 +758,7 @@ Rectangle {
             color: "#ffdedc"
             radius: 10
             border.color: "#ff8c8c"
-            border.width: 2
+            border.width: 0
         }
 
         Rectangle {
@@ -792,7 +768,57 @@ Rectangle {
             color: "#ffdedc"
             radius: 10
             border.color: "#ff8c8c"
-            border.width: 2
+            border.width: 0
+        }
+
+        Rectangle {
+            id: rectangle22
+            width: 400
+            height: 200
+            color: "#ffdedc"
+            radius: 10
+            border.color: "#ff8c8c"
+            border.width: 0
+        }
+
+        Rectangle {
+            id: rectangle23
+            width: 200
+            height: 200
+            color: "#ffdedc"
+            radius: 10
+            border.color: "#ff8c8c"
+            border.width: 0
+        }
+
+        Rectangle {
+            id: rectangle24
+            width: 400
+            height: 200
+            color: "#ffdedc"
+            radius: 10
+            border.color: "#ff8c8c"
+            border.width: 0
+        }
+
+        Rectangle {
+            id: rectangle25
+            width: 200
+            height: 200
+            color: "#ffdedc"
+            radius: 10
+            border.color: "#ff8c8c"
+            border.width: 0
+        }
+
+        Rectangle {
+            id: rectangle26
+            width: 200
+            height: 200
+            color: "#ffdedc"
+            radius: 10
+            border.color: "#ff8c8c"
+            border.width: 0
         }
     }
 
@@ -804,6 +830,7 @@ Rectangle {
         anchors.bottom: parent.bottom
         anchors.rightMargin: 0
         anchors.bottomMargin: 0
+        font.family: "Ubuntu Mono"
         focusPolicy: Qt.NoFocus
         wheelEnabled: false
         font.bold: true
@@ -879,11 +906,6 @@ Rectangle {
                 target: settings
                 visible: false
             }
-
-            PropertyChanges {
-                target: flickable
-                flickableDirection: Flickable.VerticalFlick
-            }
         },
 
         State {
@@ -939,3 +961,10 @@ Rectangle {
         }
     ]
 }
+
+/*##^##
+Designer {
+    D{i:4}D{i:285}D{i:286}D{i:287}D{i:288}D{i:289}D{i:301;invisible:true}
+}
+##^##*/
+
