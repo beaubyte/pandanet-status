@@ -1,0 +1,14 @@
+<RCC>
+    <qresource>
+        <file>XeniaProject.qmlproject</file>
+        <file>XeniaProject/Constants.qml</file>
+        <file>XeniaProject/EventListModel.qml</file>
+        <file>XeniaProject/EventListSimulator.qml</file>
+        <file>XeniaProject/qmldir</file>
+        <file>XeniaProjectContent/App.qml</file>
+        <file>XeniaProjectContent/Screen01.ui.qml</file>
+        <file>XeniaProjectContent/images/dashboard.svg</file>
+        <file>XeniaProjectContent/images/settings.svg</file>
+        <file>qtquickcontrols2.conf</file>
+    </qresource>
+</RCC>
