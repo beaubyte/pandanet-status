@@ -9,6 +9,8 @@ class statuschecker
 public:
     statuschecker();
     bool pingDevice(QString);
+private:
+
 };
 
 #endif // STATUSCHECKER_H
