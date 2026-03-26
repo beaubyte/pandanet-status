@@ -24,7 +24,8 @@ int main(int argc, char *argv[])
     engine.addImportPath(":/");
     engine.load(url);
 
-    // create app here
+
+
     if (engine.rootObjects().isEmpty())
         return -1;
     return app.exec();

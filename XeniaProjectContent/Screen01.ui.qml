@@ -19,11 +19,12 @@ Rectangle {
     property alias tab_dashboard: tab_dashboard
     state: "dashboard"
     z: -2
+    anchors.fill: parent
 
     Column {
         id: statusWindow
         width: 303
-        height: 621
+        height: parent.height - 100
         anchors.left: parent.left
         anchors.top: parent.top
         anchors.leftMargin: 20
@@ -55,14 +56,15 @@ Rectangle {
         }
 
         Flickable {
-            id: flickable
+            id: statusFlickable
             width: parent.width
             height: parent.height - 70
             clip: true
-            contentHeight: statusList.height
+            contentHeight: statusList.height * 2
             contentWidth: statusList.width
             anchors.top: statusHeader.bottom
             anchors.topMargin: 20
+            boundsBehavior: Flickable.DragAndOvershootBounds
             synchronousDrag: false
             flickableDirection: Flickable.VerticalFlick
 
@@ -70,12 +72,12 @@ Rectangle {
                 id: statusList
                 x: 0
                 y: 0
-                width: flickable.width
-                height: flickable.height
-                anchors.left: flickable.left
+                width: statusFlickable.width
+                height: statusFlickable.height
+                anchors.left: statusFlickable.left
                 anchors.leftMargin: 20
                 spacing: 10
-                anchors.horizontalCenter: flickable.horizontalCenter
+                anchors.horizontalCenter: statusFlickable.horizontalCenter
 
                 Grid {
                     id: grid
@@ -188,7 +190,7 @@ Rectangle {
                     }
 
                     Rectangle {
-                        id: rectangle9
+                        id: test
                         width: 15
                         height: 15
                         radius: 15
@@ -708,120 +710,6 @@ Rectangle {
         }
     }
 
-    Flow {
-        id: servicesFlow
-        width: 952
-        height: 763
-        anchors.left: statusWindow.right
-        anchors.top: parent.top
-        anchors.leftMargin: 20
-        anchors.topMargin: 20
-        spacing: 20
-
-        Rectangle {
-            id: rectangle1
-            width: 200
-            height: 200
-            color: "#ffdedc"
-            radius: 10
-            border.color: "#ff7068"
-            border.width: 0
-
-            Text {
-                id: text5
-                text: qsTr("Discord")
-                anchors.left: parent.left
-                anchors.top: parent.top
-                anchors.leftMargin: 10
-                anchors.topMargin: 10
-                font.pixelSize: 16
-                horizontalAlignment: Text.AlignLeft
-                font.bold: false
-                font.family: "Ubuntu Mono"
-            }
-        }
-
-        Rectangle {
-            id: rectangle2
-            width: 200
-            height: 200
-            color: "#ffdedc"
-            radius: 10
-            border.color: "#ff8c8c"
-            border.width: 0
-        }
-
-        Rectangle {
-            id: rectangle3
-            width: 400
-            height: 200
-            color: "#ffdedc"
-            radius: 10
-            border.color: "#ff8c8c"
-            border.width: 0
-        }
-
-        Rectangle {
-            id: rectangle4
-            width: 200
-            height: 200
-            color: "#ffdedc"
-            radius: 10
-            border.color: "#ff8c8c"
-            border.width: 0
-        }
-
-        Rectangle {
-            id: rectangle22
-            width: 400
-            height: 200
-            color: "#ffdedc"
-            radius: 10
-            border.color: "#ff8c8c"
-            border.width: 0
-        }
-
-        Rectangle {
-            id: rectangle23
-            width: 200
-            height: 200
-            color: "#ffdedc"
-            radius: 10
-            border.color: "#ff8c8c"
-            border.width: 0
-        }
-
-        Rectangle {
-            id: rectangle24
-            width: 400
-            height: 200
-            color: "#ffdedc"
-            radius: 10
-            border.color: "#ff8c8c"
-            border.width: 0
-        }
-
-        Rectangle {
-            id: rectangle25
-            width: 200
-            height: 200
-            color: "#ffdedc"
-            radius: 10
-            border.color: "#ff8c8c"
-            border.width: 0
-        }
-
-        Rectangle {
-            id: rectangle26
-            width: 200
-            height: 200
-            color: "#ffdedc"
-            radius: 10
-            border.color: "#ff8c8c"
-            border.width: 0
-        }
-    }
-
     TabBar {
         id: tabSelect
         width: 240
@@ -859,9 +747,9 @@ Rectangle {
     Row {
         id: uptime
         width: 303
-        height: 122
+        height: 70
         anchors.left: parent.left
-        anchors.top: statusWindow.bottom
+        anchors.bottom: parent.bottom
         anchors.leftMargin: 20
         anchors.topMargin: 20
 
@@ -879,6 +767,7 @@ Rectangle {
             anchors.leftMargin: 10
             anchors.bottomMargin: 10
             font.pixelSize: 16
+            font.family: "Ubuntu Mono"
         }
     }
 
@@ -891,6 +780,129 @@ Rectangle {
             id: rectangle
             color: "#ffffff"
             anchors.fill: parent
+        }
+    }
+
+    Flickable {
+        id: servicesFlickable
+        width: parent.width - statusWindow.width - 50
+        height: parent.height - 80
+        flickableDirection: Flickable.VerticalFlick
+        contentHeight: servicesFlow.height
+        contentWidth: servicesFlow.width
+        anchors.left: statusWindow.right
+        anchors.top: parent.top
+        anchors.leftMargin: 20
+        anchors.topMargin: 20
+
+        Flow {
+            id: servicesFlow
+            width: servicesFlickable.width
+            height: servicesFlickable.height
+            spacing: 20
+
+            Rectangle {
+                id: rectangle1
+                width: 200
+                height: 200
+                color: "#ffdedc"
+                radius: 10
+                border.color: "#ff7068"
+                border.width: 0
+
+                Text {
+                    id: text5
+                    text: qsTr("Discord")
+                    anchors.left: parent.left
+                    anchors.top: parent.top
+                    anchors.leftMargin: 10
+                    anchors.topMargin: 10
+                    font.pixelSize: 16
+                    horizontalAlignment: Text.AlignLeft
+                    font.bold: false
+                    font.family: "Ubuntu Mono"
+                }
+            }
+
+            Rectangle {
+                id: rectangle2
+                width: 200
+                height: 200
+                color: "#ffdedc"
+                radius: 10
+                border.color: "#ff8c8c"
+                border.width: 0
+            }
+
+            Rectangle {
+                id: rectangle3
+                width: 400
+                height: 200
+                color: "#ffdedc"
+                radius: 10
+                border.color: "#ff8c8c"
+                border.width: 0
+            }
+
+            Rectangle {
+                id: rectangle4
+                width: 200
+                height: 200
+                color: "#ffdedc"
+                radius: 10
+                border.color: "#ff8c8c"
+                border.width: 0
+            }
+
+            Rectangle {
+                id: rectangle22
+                width: 400
+                height: 200
+                color: "#ffdedc"
+                radius: 10
+                border.color: "#ff8c8c"
+                border.width: 0
+            }
+
+            Rectangle {
+                id: rectangle23
+                width: 200
+                height: 200
+                color: "#ffdedc"
+                radius: 10
+                border.color: "#ff8c8c"
+                border.width: 0
+            }
+
+            Rectangle {
+                id: rectangle24
+                width: 400
+                height: 200
+                color: "#ffdedc"
+                radius: 10
+                border.color: "#ff8c8c"
+                border.width: 0
+            }
+
+            Rectangle {
+                id: rectangle25
+                width: 200
+                height: 200
+                color: "#ffdedc"
+                radius: 10
+                border.color: "#ff8c8c"
+                border.width: 0
+            }
+
+            Rectangle {
+                id: rectangle26
+                width: 200
+                height: 200
+                color: "#ffdedc"
+                radius: 10
+                border.color: "#ff8c8c"
+                border.width: 0
+            }
         }
     }
     states: [
@@ -952,7 +964,7 @@ Rectangle {
             }
 
             PropertyChanges {
-                target: flickable
+                target: statusFlickable
                 interactive: false
             }
         },
@@ -962,9 +974,5 @@ Rectangle {
     ]
 }
 
-/*##^##
-Designer {
-    D{i:4}D{i:285}D{i:286}D{i:287}D{i:288}D{i:289}D{i:301;invisible:true}
-}
-##^##*/
+
 
