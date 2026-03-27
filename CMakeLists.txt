@@ -25,6 +25,7 @@ qt_add_executable(${CMAKE_PROJECT_NAME}
     App/device.h App/device.cpp
     App/logic.qml
     README.md
+    .gitignore
 )
 qt_add_resources(${CMAKE_PROJECT_NAME} "configuration"
     PREFIX "/"
