@@ -20,6 +20,7 @@ Rectangle {
     state: "dashboard"
     z: -2
     anchors.fill: parent
+    property alias busyIndicator: busyIndicator
 
     Column {
         id: statusWindow
@@ -905,6 +906,11 @@ Rectangle {
             }
         }
     }
+
+    BusyIndicator {
+        id: busyIndicator
+        anchors.centerIn: parent
+    }
     states: [
         State {
             name: "dashboard"
@@ -973,6 +979,3 @@ Rectangle {
         }
     ]
 }
-
-
-

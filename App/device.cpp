@@ -20,3 +20,9 @@ QString device::getName(){
 QHostAddress device::getIPv6(){
     return ipv6address;
 }
+
+QString device::getHostname(){
+    // unsure if this returns what i need yet
+    return hostname.hostName();
+}
+
