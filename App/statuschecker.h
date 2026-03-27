@@ -3,7 +3,7 @@
 
 #include <QObject>
 
-class statuschecker
+class statuschecker : public QObject
 {
     Q_OBJECT
 public:

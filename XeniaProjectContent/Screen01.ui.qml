@@ -20,8 +20,7 @@ Rectangle {
     state: "dashboard"
     z: -2
     anchors.fill: parent
-    property alias busyIndicator: busyIndicator
-
+    property alias loaderVisible: loader.visible
     Column {
         id: statusWindow
         width: 303
@@ -908,7 +907,7 @@ Rectangle {
     }
 
     BusyIndicator {
-        id: busyIndicator
+        id: loader
         anchors.centerIn: parent
     }
     states: [
