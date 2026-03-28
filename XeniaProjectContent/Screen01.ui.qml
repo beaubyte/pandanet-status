@@ -780,6 +780,31 @@ Rectangle {
             id: rectangle
             color: "#ffffff"
             anchors.fill: parent
+
+            Flickable {
+                id: flickable
+                anchors.fill: parent
+
+                GroupBox {
+                    id: api
+                    width: 496
+                    height: 257
+                    anchors.left: parent.left
+                    anchors.top: parent.top
+                    anchors.leftMargin: 15
+                    anchors.topMargin: 15
+                    title: qsTr("API Keys")
+
+                    TextField {
+                        id: tskey
+                        anchors.left: parent.left
+                        anchors.top: parent.top
+                        anchors.leftMargin: 0
+                        anchors.topMargin: 0
+                        placeholderText: qsTr("API Key")
+                    }
+                }
+            }
         }
     }
 
@@ -978,3 +1003,10 @@ Rectangle {
         }
     ]
 }
+
+/*##^##
+Designer {
+    D{i:0}D{i:1;invisible:true}D{i:94;invisible:true}D{i:99}D{i:101}D{i:102;invisible:true}
+}
+##^##*/
+

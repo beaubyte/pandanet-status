@@ -23,9 +23,11 @@ qt_standard_project_setup()
 qt_add_executable(${CMAKE_PROJECT_NAME}
     App/statuschecker.h App/statuschecker.cpp
     App/device.h App/device.cpp
-    App/logic.qml
+
     README.md
     .gitignore
+    App/tailscaler.h App/tailscaler.cpp
+    App/.env
 )
 qt_add_resources(${CMAKE_PROJECT_NAME} "configuration"
     PREFIX "/"
