@@ -28,6 +28,7 @@ qt_add_executable(${CMAKE_PROJECT_NAME}
     .gitignore
     App/tailscaler.h App/tailscaler.cpp
     App/.env
+
 )
 qt_add_resources(${CMAKE_PROJECT_NAME} "configuration"
     PREFIX "/"

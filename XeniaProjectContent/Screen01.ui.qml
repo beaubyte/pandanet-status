@@ -20,6 +20,8 @@ Rectangle {
     state: "dashboard"
     z: -2
     anchors.fill: parent
+    property alias tskeyText: tskey.text
+    property alias tskeyFinished: tskey.onFinishedEditing
     property alias loaderVisible: loader.visible
     Column {
         id: statusWindow
@@ -801,7 +803,7 @@ Rectangle {
                         anchors.top: parent.top
                         anchors.leftMargin: 0
                         anchors.topMargin: 0
-                        placeholderText: qsTr("API Key")
+                        placeholderText: qsTr("Tailscale")
                     }
                 }
             }
@@ -1006,7 +1008,7 @@ Rectangle {
 
 /*##^##
 Designer {
-    D{i:0}D{i:1;invisible:true}D{i:94;invisible:true}D{i:99}D{i:101}D{i:102;invisible:true}
+    D{i:0}D{i:1;invisible:true}D{i:94;invisible:true}D{i:102;invisible:true}
 }
 ##^##*/
 

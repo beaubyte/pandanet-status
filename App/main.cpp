@@ -3,7 +3,7 @@
 
 #include <QApplication>
 #include <QQmlApplicationEngine>
-
+#include <QSettings>
 #include "autogen/environment.h"
 
 int main(int argc, char *argv[])
@@ -24,6 +24,12 @@ int main(int argc, char *argv[])
     engine.addImportPath(":/");
     engine.load(url);
 
+    // start of main program logic
+    QCoreApplication::setOrganizationName("beaubyte");
+    QCoreApplication::setApplicationName("pandaNet-status");
+    QSettings settings;
+
+    tailscaler ts = new tailscaler()
 
 
     if (engine.rootObjects().isEmpty())

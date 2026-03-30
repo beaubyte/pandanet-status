@@ -11,6 +11,9 @@ Window {
         id: mainScreen
         loaderVisible: false
         anchors.centerIn: parent
+        tskeyFinished{
+
+        }
     }
 
 }
